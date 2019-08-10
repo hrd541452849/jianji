@@ -1,25 +1,24 @@
+//引入工具
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route } from "react-router-dom";
+
+//引入组件
+import TabBar from './components/TabBar';
+import Home from './pages/private/home/Home';
+import Together from './pages/together/together/Together';
+import Book from './pages/book/book/Book';
+import Mine from './pages/mine/mine/Mine';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <Route path = '/private' component = {Home} />
+        <Route path = '/together' component = {Together} />
+        <Route path = '/book' component = {Book} />
+        <Route path = '/mine' component = {Mine} />
+        <TabBar />
+      </div>
   );
 }
 
