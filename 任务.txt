@@ -1,0 +1,11 @@
+
+1、mine 我的                                王伟超
+
+2、banner + private  引导页 + 私密写         侯信聪
+
+3、logReg + book 登录注册 + 做书             段仲武
+
+4、components + together 公共组件 + 一起写   黄汝冬
+
+
+注：统一使用rem布局
