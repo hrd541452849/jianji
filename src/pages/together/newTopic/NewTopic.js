@@ -1,14 +1,14 @@
-// 邀请好友页面
+// 新建主题页面
 import React, { Component } from 'react';
 
-class Invite extends Component {
+class NewTopic extends Component {
     render() {
         return (
             <div>
-                邀请好友
+                新建主题
             </div>
         );
     }
 }
 
-export default Invite;
+export default NewTopic;
