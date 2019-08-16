@@ -1,4 +1,5 @@
-#app {
+#root {
     font-size: .32rem;
     line-height: 1.5;
+    color: #333;
 }

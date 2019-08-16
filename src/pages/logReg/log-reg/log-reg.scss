@@ -1,0 +1,44 @@
+#logReg {
+    .logo {
+        text-align: center;
+        padding: .853333rem 0 1.066667rem;
+        img {
+            width: 2.453333rem;
+        }
+    }
+    p {
+        color: #666666;
+        text-align: center;
+    }
+    .imgContent {
+        width: 100%;
+        box-sizing: border-box;
+        padding: .133333rem .4rem 0;
+        text-align: center;
+        img {
+            width: 100%;
+        }
+    }
+    .btnContent {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 1.093333rem;
+        margin-top: -0.48rem;
+        a {
+            box-sizing: border-box;
+            line-height: 1.066667rem;
+            width: 3.333333rem;
+            height: 1.066667rem;
+            text-align: center;
+            border: 1px solid #333;
+            border-radius: .533333rem;
+            color: #333;
+            font-size: .373333rem;
+            &:first-child {
+                background: #333;
+                color: #fff;
+            }
+        }
+    }
+}

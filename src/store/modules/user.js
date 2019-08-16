@@ -25,7 +25,7 @@ export default (state = initialState, action)=>{
 // 同步action
 
 // 设置登录状态
-const setLoginStatusAction = (value)=>({
+export const setLoginStatusAction = (value)=>({
     type: SET_LOGIN_STATUS,
     value
 })

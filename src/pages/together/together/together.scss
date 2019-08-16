@@ -1,0 +1,15 @@
+#together {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 1.306667rem;
+    background: linear-gradient(to bottom, #F5F5F5 0%,#F7F7F7 100%);
+    .together-head {
+        background: #fff;
+        box-shadow: 0 .026667rem .053333rem #DFDFDF;
+        .right {
+            font-size: .693333rem;
+            color: #B3B3B3;
+        }
+    }
+}

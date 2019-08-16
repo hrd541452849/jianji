@@ -1,6 +1,7 @@
 //引入工具
 import React, {lazy, Suspense} from 'react';
 import { Route, Switch, Redirect } from "react-router-dom";
+import { connect } from 'react-redux';
 
 //引入组件
 // import TabBar from './components/TabBar';
@@ -48,20 +49,26 @@ const RecycleBin = lazy (() => import ('./pages/mine/recycle-bin/RecycleBin'));
 const SetUp = lazy (() => import ('./pages/mine/set-up/SetUp'));
 const ShareApp = lazy (() => import ('./pages/mine/share-app/ShareApp'));
 
+// 登录注册
+const LogReg = lazy (() => import('./pages/logReg/log-reg/LogReg'));
+const Login = lazy (() => import('./pages/logReg/login/Login'));
+const Register = lazy (() => import('./pages/logReg/register/Register'));
 
-function App() {
+
+const AppPanel = () => {
   return (
-    <Suspense fallback={<Loding/>}>
       <div className="App">
         {/* 根页面，Switch提高性能，Redirect重定向路由 */}
         <Switch>
-          <Route path = '/' exact render = {() => (<Redirect to = '/private' />)} />
           <Route path = '/private' component = {Private} />
           <Route path = '/together' component = {Together} />
           <Route path = '/book' component = {Book} />
           <Route path = '/mine' component = {Mine} />
+          <Route path = '/' render = {() => (<Redirect to = '/private' />)} />
         </Switch>
 
+        {/* 底部导航栏 */}
+          <TabBar />
 
         {/* 子页面 */}
           {/* 私密写 */}
@@ -92,11 +99,31 @@ function App() {
           <Route path = '/mine/shareapp' component = {ShareApp} />
 
 
-        {/* 底部导航栏 */}
-        <TabBar />
       </div>
+  );
+}
+
+const LoginPanel = () => (
+  <>
+  <LogReg/>
+  <Route path = '/login' component = {Login} />
+  <Route path = '/register' component = {Register} />
+  </>
+);
+
+const App = (props)=>{
+  return (
+    <Suspense fallback={<Loding/>}>
+      {props.isLogin ? <AppPanel /> : <LoginPanel/>}
     </Suspense>
   );
 }
 
-export default App;
+const mapStateToProps = (state)=>({
+  isLogin: state.user.isLogin
+})
+const mapDispatchToProps = ()=>({
+
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
