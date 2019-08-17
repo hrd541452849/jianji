@@ -1,13 +1,14 @@
+// 分享页
 import React, { Component } from 'react';
 
-class Home extends Component {
+class ShareApp extends Component {
     render() {
         return (
             <div>
-                <h1>私密写</h1>
+                分享
             </div>
         );
     }
 }
 
-export default Home;
+export default ShareApp;

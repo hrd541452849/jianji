@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // 消息页
 import React, { Component } from 'react';
 import './style.scss'
@@ -81,6 +82,19 @@ class EditData extends Component {
 
         this.setState({val:''})
     }
+=======
+// 编辑个人资料页
+import React, { Component } from 'react';
+
+class EditData extends Component {
+    render() {
+        return (
+            <div>
+                个人资料
+            </div>
+        );
+    }
+>>>>>>> 5c3b711f0f5a0c888b22b75a3b790f2dce52b968
 }
 
 export default EditData;
