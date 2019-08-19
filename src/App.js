@@ -43,18 +43,15 @@ const DeleteBook = lazy (() => import ('./pages/book/delete-book/DeleteBook'));
 // 我的子组件
 const EditData = lazy (() => import ('./pages/mine/edit-data/EditData'));
 const Message = lazy (() => import ('./pages/mine/message/Message'));
+const Share = lazy (() => import ('./pages/mine/share/share'));
 const MyOrder = lazy (() => import ('./pages/mine/my-order/MyOrder'));
 const Opinion = lazy (() => import ('./pages/mine/opinion/Opinion'));
 const RecycleBin = lazy (() => import ('./pages/mine/recycle-bin/RecycleBin'));
 const SetUp = lazy (() => import ('./pages/mine/set-up/SetUp'));
-const Mywork = lazy (() => import ('./pages/mine/Mywork/Mywork'));
-const Share = lazy (() => import ('./pages/mine/share/share'));
-const ShareApp = lazy (() => import ('./pages/mine/share-app/ShareApp'));
-
-//我的信息子组件
-const Comment =lazy(()=> import ('./pages/mine/message/children/comment'))
-const Fabulous = lazy(()=>import ('./pages/mine/message/children/Fabulous'))
-const News = lazy(()=>import ('./pages/mine/message/children/news'))
+// 我的信息子页面
+const Comment = lazy (() => import ('./pages/mine/message/children/comment'));
+const Fabulous = lazy (() => import ('./pages/mine/message/children/Fabulous'));
+const News = lazy (() => import ('./pages/mine/message/children/news'));
 
 // 登录注册
 const LogReg = lazy (() => import('./pages/logReg/log-reg/LogReg'));
@@ -99,23 +96,16 @@ const AppPanel = () => {
 
           {/* 我的 */}
           <Route path = '/mine/editdata' component = {EditData} />
-
-          <Route path = '/mine/message' component = {Message} />
-          <Route path = '/mine/message/Comment'  component={Comment}/>
-          <Route path = '/mine/message/Fabulous'  component={Fabulous}/>
-          <Route path = '/mine/message/News'  component={News}/>
-
           <Route path = '/mine/message' component = {Message} />
           <Route path = '/mine/myorder' component = {MyOrder} />
           <Route path = '/mine/opinion' component = {Opinion} />
           <Route path = '/mine/recyclebin' component = {RecycleBin} />
           <Route path = '/mine/setup' component = {SetUp} />
-          <Route path = '/mine/Mywork' component = {Mywork} />
           <Route path = '/mine/Share' component = {Share} />
-
-          <Route path = '/mine/shareapp' component = {ShareApp} />
-
-
+         {/* 我的信息子页面 */}
+        <Route path = '/mine/message/Comment' component = {Comment} />
+        <Route path = '/mine/message/Fabulous' component = {Fabulous} />
+        <Route path = '/mine/message/News' component = {News} />
       </div>
     </Suspense>
   );

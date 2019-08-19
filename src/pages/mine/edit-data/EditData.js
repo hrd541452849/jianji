@@ -1,13 +1,16 @@
 // 消息页
 import React, { Component } from 'react';
 import './style.scss'
+import store from '../../../store'
 
 class EditData extends Component {
     constructor(props){
         super(props)
+        //将数据转为内部数据
         this.state = {
             isShow:false,
-            val:''
+            val:'',
+            data:store.getState().data
         }
     }
     render() {
@@ -20,7 +23,7 @@ class EditData extends Component {
                 </header> 
                 <div className="Head_portrait">
                     <div className="url_img">
-                        <img src="" alt=""/>
+                    <img src="http://img.ivsky.com/img/tupian/pre/201402/17/jingjiedebifang-001.jpg" alt=""/>
                     </div>
                     <div className="information">
                         <div className="Account_number">
@@ -30,7 +33,8 @@ class EditData extends Component {
                         <div className="Pen_name">
                             <b>笔名</b>
                             <span className="text" onClick={this.modifyAction.bind(this)}>
-                                <span>刘婆子</span>
+                                {/* <p className="xm">{store.getState().mine.data}</p> */}
+                                <span>{store.getState().mine.data}</span>
                                 <i className="iconfont  icon-youjiantou"></i>
                             </span>
                         </div>
@@ -72,15 +76,18 @@ class EditData extends Component {
         this.setState({
             val:ev.target.value
         })
-        //console.log(ev.target.value)
     }
     //修改名字
     bindConfirm(){
-        let message = this.state.val
-        console.log(message)
-
-        this.setState({val:''})
+        let value = this.state.val
+        store.dispatch({ 
+            type:'set_data',
+            value
+        })
+        //清空输入框
+        this.setState({val:'',isShow:false})
     }
+   //监听数据变化 ，将新的数据转为组件内部
 }
 
 export default EditData;

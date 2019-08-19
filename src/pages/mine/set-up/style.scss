@@ -1,0 +1,103 @@
+#SetUp{
+    background: #F7F7F7;
+    .header_top{
+        height: 1.2rem;
+        background: RGBA(247, 247, 247, 1);
+        display: flex;
+        align-items: center;
+        padding-left: .266667rem;
+        background: white;
+        //text-align: center;
+        //justify-content: center;
+        position: relative;
+        .iconfont{
+            font-weight: 600;
+            font-size: .373333rem;
+            position: absolute;
+            left: .266667rem;
+        }
+        span{
+            margin-left: .533333rem;
+            font-size: .373333rem;
+            font-family:PingFang-SC-Bold;
+            font-weight:bold;
+            color:rgba(51,51,51,1);
+        }
+    }
+    .Set_warp{
+        margin-top: .133333rem;
+        padding: 0 .533333rem;
+        background: white;
+        padding-top: .266667rem;
+        padding-bottom: .266667rem;
+        .up_list{
+            li{
+                margin-top: .4rem;
+                font-size: .373333rem;
+                border-bottom: 1px solid #B7B7B7;
+                padding-bottom: .266667rem;
+            }
+            .Set_item{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .iconfont{
+                    font-size: .4rem;
+                }
+                span{
+                    color: #999999;
+                }
+            }
+            .Wifi_upload{
+                color: #999999;
+                .am-list-item{
+                    .am-list-line{
+                        justify-content: space-between;
+                        display: flex;
+                    }
+                }
+            }
+            .Password{
+                display: flex;
+                .iconfont{
+                    font-size: .48rem;
+                }
+                .am-list-item{
+                    margin-left: .133333rem;
+                    justify-content: space-between;
+                    width: 100%;
+                    color: #999999;
+                    .am-list-line{
+                        display: flex;
+                        position: relative;
+                        .am-list-extra{
+                            position: absolute;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+            .version_number{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: #999999;
+            }
+        }
+       
+    }
+    .Log_out{
+        margin: auto;
+        width: 8.64rem;
+        height: 1.013333rem;
+        text-align: center;
+        line-height: 1.013333rem;
+        margin-top: .533333rem;
+        background: red;
+        border-radius: .266667rem;
+        span{
+            font-size: .373333rem;
+            color: white;
+        }
+    }
+}
