@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-// 登录
-=======
 // 登录
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
@@ -61,6 +58,13 @@ class Login extends Component {
 
     // 登录
     loginAction = () => {
+        if (!/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test(this.state.userName)) {
+            alert("请输入正确的邮箱账号")
+            return false;
+        }else if(!/[a-zA-z0-9]{6,20}/.test(this.state.password)) {
+            alert("密码应由6-20位字母或数字组成")
+            return false;
+        }
         console.log('登录');
         this.props.loginAciton(true);
     }
@@ -77,4 +81,3 @@ const mapDispatchToProps = (dispatch)=>({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);
->>>>>>> 5c3b711f0f5a0c888b22b75a3b790f2dce52b968

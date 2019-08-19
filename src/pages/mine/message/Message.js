@@ -1,6 +1,5 @@
 // 消息页
 import React, { Component } from 'react';
-<<<<<<< HEAD
 import './style.scss'
 import{NavLink} from 'react-router-dom'
 class Message extends Component {
@@ -40,17 +39,6 @@ class Message extends Component {
         this.props.history.goBack()
     }
 
-=======
-
-class Message extends Component {
-    render() {
-        return (
-            <div>
-                消息
-            </div>
-        );
-    }
->>>>>>> 5c3b711f0f5a0c888b22b75a3b790f2dce52b968
 }
 
 export default Message;

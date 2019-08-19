@@ -1,7 +1,14 @@
 //引入工具
 import React, {lazy, Suspense} from 'react';
 import { Route, Switch, Redirect } from "react-router-dom";
-<<<<<<< HEAD
+import { connect } from 'react-redux';
+
+//引入组件
+// import TabBar from './components/TabBar';
+// import Home from './pages/private/home/Home';
+// import Together from './pages/together/together/Together';
+// import Book from './pages/book/book/Book';
+// import Mine from './pages/mine/mine/Mine';
 
 //不能或者是不需要懒加载的组件
 import Loding from './pages/common/loding/Loding';
@@ -42,62 +49,12 @@ const RecycleBin = lazy (() => import ('./pages/mine/recycle-bin/RecycleBin'));
 const SetUp = lazy (() => import ('./pages/mine/set-up/SetUp'));
 const Mywork = lazy (() => import ('./pages/mine/Mywork/Mywork'));
 const Share = lazy (() => import ('./pages/mine/share/share'));
+const ShareApp = lazy (() => import ('./pages/mine/share-app/ShareApp'));
 
 //我的信息子组件
 const Comment =lazy(()=> import ('./pages/mine/message/children/comment'))
 const Fabulous = lazy(()=>import ('./pages/mine/message/children/Fabulous'))
 const News = lazy(()=>import ('./pages/mine/message/children/news'))
-
-
-=======
-import { connect } from 'react-redux';
-
-//引入组件
-// import TabBar from './components/TabBar';
-// import Home from './pages/private/home/Home';
-// import Together from './pages/together/together/Together';
-// import Book from './pages/book/book/Book';
-// import Mine from './pages/mine/mine/Mine';
->>>>>>> 5c3b711f0f5a0c888b22b75a3b790f2dce52b968
-
-//不能或者是不需要懒加载的组件
-import Loding from './pages/common/loding/Loding';
-import TabBar from './components/tab-bar/TabBar';
-
-//懒加载引入根组件
-const Private = lazy (() => import ('./pages/private/private/Private'));
-const Together = lazy (() => import ('./pages/together/together/Together'));
-const Book = lazy (() => import ('./pages/book/book/Book'));
-const Mine = lazy (() => import ('./pages/mine/mine/Mine'));
-
-// 子组件
-// 私密写子组件
-const Aside = lazy (() => import ('./pages/private/aside/Aside'));
-const Record = lazy (() => import ('./pages/private/record/Record'));
-const Search = lazy (() => import ('./pages/private/search/Search'));
-const Result = lazy (() => import ('./pages/private/search-result/Result'));
-
-// 一起写子组件
-const AddContent = lazy (() => import ('./pages/together/addContent/AddContent'));
-const Complete = lazy (() => import ('./pages/together/complete/Complete'));
-const Invite = lazy (() => import ('./pages/together/invite/Invite'));
-const NewTopic = lazy (() => import ('./pages/together/newTopic/NewTopic'));
-
-// 做书子组件
-const AddBook = lazy (() => import ('./pages/book/add-book/AddBook'));
-const BookList = lazy (() => import ('./pages/book/book-list/BookList'));
-const BookStyle = lazy (() => import ('./pages/book/book-style/BookStyle'));
-const DeleteBook = lazy (() => import ('./pages/book/delete-book/DeleteBook'));
-
-
-// 我的子组件
-const EditData = lazy (() => import ('./pages/mine/edit-data/EditData'));
-const Message = lazy (() => import ('./pages/mine/message/Message'));
-const MyOrder = lazy (() => import ('./pages/mine/my-order/MyOrder'));
-const Opinion = lazy (() => import ('./pages/mine/opinion/Opinion'));
-const RecycleBin = lazy (() => import ('./pages/mine/recycle-bin/RecycleBin'));
-const SetUp = lazy (() => import ('./pages/mine/set-up/SetUp'));
-const ShareApp = lazy (() => import ('./pages/mine/share-app/ShareApp'));
 
 // 登录注册
 const LogReg = lazy (() => import('./pages/logReg/log-reg/LogReg'));
@@ -111,24 +68,15 @@ const AppPanel = () => {
       <div className="App">
         {/* 根页面，Switch提高性能，Redirect重定向路由 */}
         <Switch>
-<<<<<<< HEAD
-          <Route path = '/' exact render = {() => (<Redirect to = '/private' />)} />
-=======
->>>>>>> 5c3b711f0f5a0c888b22b75a3b790f2dce52b968
           <Route path = '/private' component = {Private} />
           <Route path = '/together' component = {Together} />
           <Route path = '/book' component = {Book} />
           <Route path = '/mine' component = {Mine} />
-<<<<<<< HEAD
-        </Switch>
-
-=======
           <Route path = '/' render = {() => (<Redirect to = '/private' />)} />
         </Switch>
 
         {/* 底部导航栏 */}
           <TabBar />
->>>>>>> 5c3b711f0f5a0c888b22b75a3b790f2dce52b968
 
         {/* 子页面 */}
           {/* 私密写 */}
@@ -151,30 +99,23 @@ const AppPanel = () => {
 
           {/* 我的 */}
           <Route path = '/mine/editdata' component = {EditData} />
-<<<<<<< HEAD
 
           <Route path = '/mine/message' component = {Message} />
           <Route path = '/mine/message/Comment'  component={Comment}/>
           <Route path = '/mine/message/Fabulous'  component={Fabulous}/>
           <Route path = '/mine/message/News'  component={News}/>
 
-=======
           <Route path = '/mine/message' component = {Message} />
->>>>>>> 5c3b711f0f5a0c888b22b75a3b790f2dce52b968
           <Route path = '/mine/myorder' component = {MyOrder} />
           <Route path = '/mine/opinion' component = {Opinion} />
           <Route path = '/mine/recyclebin' component = {RecycleBin} />
           <Route path = '/mine/setup' component = {SetUp} />
-<<<<<<< HEAD
           <Route path = '/mine/Mywork' component = {Mywork} />
           <Route path = '/mine/Share' component = {Share} />
-        {/* 底部导航栏 */}
-        <TabBar />
-=======
+
           <Route path = '/mine/shareapp' component = {ShareApp} />
 
 
->>>>>>> 5c3b711f0f5a0c888b22b75a3b790f2dce52b968
       </div>
     </Suspense>
   );
@@ -182,9 +123,11 @@ const AppPanel = () => {
 
 const LoginPanel = () => (
   <>
-  <LogReg/>
+  {/* <LogReg/> */}
+  <Route path = '/logres' component = {LogReg} />
   <Route path = '/login' component = {Login} />
   <Route path = '/register' component = {Register} />
+  <Route path = '/' render = {() => (<Redirect to = '/logres' />)} />
   </>
 );
 
