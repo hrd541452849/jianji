@@ -58,6 +58,13 @@ class Login extends Component {
 
     // 登录
     loginAction = () => {
+        if (!/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test(this.state.userName)) {
+            alert("请输入正确的邮箱账号")
+            return false;
+        }else if(!/[a-zA-z0-9]{6,20}/.test(this.state.password)) {
+            alert("密码应由6-20位字母或数字组成")
+            return false;
+        }
         console.log('登录');
         this.props.loginAciton(true);
     }

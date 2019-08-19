@@ -105,9 +105,11 @@ const AppPanel = () => {
 
 const LoginPanel = () => (
   <>
-  <LogReg/>
+  {/* <LogReg/> */}
+  <Route path = '/logres' component = {LogReg} />
   <Route path = '/login' component = {Login} />
   <Route path = '/register' component = {Register} />
+  <Route path = '/' render = {() => (<Redirect to = '/logres' />)} />
   </>
 );
 
