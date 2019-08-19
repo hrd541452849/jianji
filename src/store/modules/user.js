@@ -7,7 +7,7 @@ const SET_LOGIN_STATUS = 'user/set_login_status';
 
 // state
 const initialState = {
-    isLogin: false,
+    isLogin: true,
     userInfo: {}
 };
 

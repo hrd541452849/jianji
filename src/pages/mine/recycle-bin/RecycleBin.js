@@ -1,10 +1,10 @@
-// 我的回收站
+
 import React, { Component } from 'react';
 
 class RecycleBin extends Component {
     render() {
         return (
-            <div>
+            <div className="page subpage" id="RecycleBin">
                 回收站
             </div>
         );
