@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 html, body, #app, .app{
     width: 100%;
     height: 100%;
@@ -11,7 +10,7 @@ html, body, #app, .app{
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 49px;
+    bottom: 1.306667rem;
     background: #fefefe;
     z-index: 10;
 }
@@ -22,12 +21,6 @@ html, body, #app, .app{
 .page .content{
     width: 100%;
     position: absolute;
-    top: 44px;
+    top: 1.173333rem;
     bottom: 0;
-=======
-#root {
-    font-size: .32rem;
-    line-height: 1.5;
-    color: #333;
->>>>>>> 5c3b711f0f5a0c888b22b75a3b790f2dce52b968
 }
