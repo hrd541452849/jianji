@@ -16,12 +16,51 @@
         align-items: center;
         line-height: 1.5;
         height: 100%;
+        color: #666;
         .imgContent {
-            width:  .533333rem;
-            height: .533333rem;
+            width:  .586667rem;
+            height: .586667rem;
+            background: url('/images/tab_bar_pic.png') no-repeat;
+            background-position-x: .08rem;
         }
         &.active {
-            color: red;
+            color: #333;
+        }
+        &:nth-of-type(1) {
+            .imgContent {
+                background-position-y: .053333rem;
+            }
+            &.active {
+                .imgContent {
+                    background-position-y: -0.746667rem;
+                }
+            }
+        }
+        &:nth-of-type(2) {
+            .imgContent {
+                background-position-y: -1.546667rem;
+            }
+            &.active {
+                .imgContent {
+                    background-position-y: -2.346667rem;
+                }
+            }
+        }
+        &:nth-of-type(3) {
+            .imgContent {
+                background-position-y: -3.146667rem;
+            }
+            &.active {
+                .imgContent {
+                    background-position-y: -3.946667rem;
+                }
+            }
+        }
+        &:nth-of-type(4) {
+            .imgContent {
+                background-position-y: -4.746667rem;
+            }
+
         }
     }
 }
