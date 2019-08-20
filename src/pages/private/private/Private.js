@@ -19,11 +19,17 @@ class Private extends Component {
     render() {
     //    let {time} = new Date();
     //    let {number} = 10;
-        let imgList = [
-            {key:1,src:'/images/Q.jpg'},
-            {key:2,src:'/images/Q.jpg'},
-            {key:3,src:'/images/Q.jpg'},
-            {key:4,src:'/images/Q.jpg'},
+        let imgList1 = [
+            {key:1,src:'/images/p1.png'},
+            {key:2,src:'/images/p11.png'},
+        ];
+        let imgList2 = [
+            {key:1,src:'/images/p2.png'},
+            {key:2,src:'/images/p22.png'},
+        ];
+        let imgList3 = [
+            {key:1,src:'/images/p3.png'},
+            {key:2,src:'/images/p33.png'},
         ]
         return (
             
@@ -48,7 +54,7 @@ class Private extends Component {
                                     <h2>如何快速制作一本书？</h2>
                                     <p>发表内容展示区发表说说，写文章，心情各种嗮,哈哈哈哈哈...</p>
                                     {
-                                        imgList.map(item=>(
+                                        imgList1.map(item=>(
                                             <img src={item.src} key={item.key} alt={item.id}/>
                                         ))
                                     }
@@ -57,7 +63,7 @@ class Private extends Component {
                                     <h2>什么是“一起写”？</h2>
                                     <p>和家人一起记录孩子的成长；和朋友一起记录旅程的时光；还有志同道合的朋友们，一起记录属于你...</p>
                                     {
-                                        imgList.map(item=>(
+                                        imgList2.map(item=>(
                                             <img src={item.src} key={item.key}  alt={item.id}/>
                                         ))
                                     }
@@ -66,13 +72,14 @@ class Private extends Component {
                                     <h2>什么是“一起写”？</h2>
                                     <p>和家人一起记录孩子的成长；和朋友一起记录旅程的时光；还有志同道合的朋友们，一起记录属于你...</p>
                                     {
-                                        imgList.map(item=>(
+                                        imgList3.map(item=>(
                                             <img src={item.src} key={item.key}  alt={item.id}/>
                                         ))
                                     }
                                 </div>
                                 
-                                <h1>detail</h1><h1>detail</h1>
+                                <h1>更多趣事，等你来发现</h1>
+                                <span>简计生活，循序渐进</span>
                             </div>
                         </AppScroll>
                         <Link to='/private/record' className='recordLink'><span>记录</span></Link>
