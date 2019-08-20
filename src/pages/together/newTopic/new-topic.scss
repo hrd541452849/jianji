@@ -6,4 +6,53 @@
     .new-topic-head {
         background: #fff;
     }
+    .main {
+        position: absolute;
+        top: 1.173333rem;
+        bottom: 0;
+        width: 100%;
+        overflow: hidden;
+        .imgContent {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 1.173333rem 2.56rem 1.066667rem;
+            img {
+                width: 100%;
+            }
+        }
+        .name {
+            text-align: center;
+            input {
+                box-sizing: border-box;
+                padding: 0 .266667rem;
+                font-size: .266667rem;
+                border: none;
+                width: 5.546667rem;
+                height: .933333rem;
+                background:rgba(243,243,243,1);
+            }
+        }
+        .set {
+            display: flex;
+            justify-content: space-between;
+            width: 5.866667rem;
+            margin: .64rem auto;
+            color: #666;
+            span:nth-of-type(2) {
+                display: flex;
+                align-items: center;
+                width: .72rem;
+                height: .426667rem;
+                background: #F4F4F4;
+                border-radius: .213333rem;
+                i {
+                    display: block;
+                    width: .373333rem;
+                    height: .373333rem;
+                    border-radius: 50%;
+                    background: #fff;
+                }
+            }
+        }
+    }
 }

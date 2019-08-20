@@ -12,4 +12,29 @@
             color: #B3B3B3;
         }
     }
+    .main {
+        position: absolute;
+        top: 1.173333rem;
+        bottom: 0;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+        padding-top: .8rem;
+        img {
+            width: 8.666667rem;
+        }
+        .together-add {
+            display: block;
+            position: absolute;
+            top: 10.186667rem;
+            left: 50%;
+            transform: translate(-50%,0);
+            background: #3D3D3D;
+            color: #fff;
+            line-height: .853333rem;
+            width: 4.266667rem;
+            border-radius: .426667rem;
+            font-size: .426667rem;
+        }
+    }
 }
