@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 html, body, #app, .app{
     width: 100%;
     height: 100%;
@@ -24,10 +23,9 @@ html, body, #app, .app{
     position: absolute;
     top: 44px;
     bottom: 0;
-=======
+}
 #root {
     font-size: .32rem;
     line-height: 1.5;
     color: #333;
->>>>>>> 5c3b711f0f5a0c888b22b75a3b790f2dce52b968
 }
