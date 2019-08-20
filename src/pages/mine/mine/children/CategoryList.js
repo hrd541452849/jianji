@@ -5,9 +5,9 @@ import './list.scss'
 class componentName extends Component {
     render() {
         const listNav =[
-            {id:1,name:'我的作品',path:'/mine/Mywork',icon:'icon-_zuopinzhuzuoquan'},
-            {id:2,name:'回收站',path:'/mine/recyclebin',icon:'icon-huishouzhan'},
-            {id:3,name:'意见反馈',path:'/mine/opinion',icon:'icon-xiaoxi'},
+            {id:1,name:'我的作品',path:'/mine/MyOrder',icon:'icon-_zuopinzhuzuoquan'},
+            {id:2,name:'回收站',path:'/mine/RecycleBin',icon:'icon-huishouzhan'},
+            {id:3,name:'意见反馈',path:'/mine/Opinion',icon:'icon-xiaoxi'},
             {id:4,name:'分享App',path:'/mine/Share',icon:'icon-fenxiang'},
             {id:5,name:'我的设置',path:'/mine/setup',icon:'icon-shezhi'}
         ]

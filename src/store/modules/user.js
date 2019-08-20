@@ -4,10 +4,12 @@ import {post, get} from '../../utils/request'
 
 // types
 const SET_LOGIN_STATUS = 'user/set_login_status';
+const TOGGLE_ISPRIVATE = 'user/toggle_isPrivate';
 
 // state
 const initialState = {
-    isLogin: false,
+    isPrivate: true,
+    isLogin: true,
     userInfo: {}
 };
 
@@ -18,6 +20,11 @@ export default (state = initialState, action)=>{
             return {
                 ...state,
                 isLogin: action.value
+            };
+        case TOGGLE_ISPRIVATE:
+            return {
+                ...state,
+                isPrivate: action.value
             };
         default:
             return state;
@@ -30,6 +37,12 @@ export default (state = initialState, action)=>{
 // 设置登录状态
 export const setLoginStatusAction = (value)=>({
     type: SET_LOGIN_STATUS,
+    value
+});
+
+// 反转
+export const toggleIsPrivate = (value)=>({
+    type: TOGGLE_ISPRIVATE,
     value
 })
 
