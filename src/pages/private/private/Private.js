@@ -17,7 +17,7 @@ const Banner = lazy(()=>import('../../banner/Banner'));
 
 class Private extends Component {
     render() {
-    //    let {time} = new Date();
+       let time = new Date();
     //    let {number} = 10;
         let imgList1 = [
             {key:1,src:'/images/p1.png'},
@@ -36,15 +36,15 @@ class Private extends Component {
             <Router>
                 <div id='private'  className='ccPage'>
                     <div className='privateHeader'>
-                        <span className='today'>2019年8月17日</span>
+                        <span className='today'>{time.getFullYear()+'年'+(time.getMonth()+1)+'月'+time.getDate()+'日'}</span>
                         <Link to='/private/search' className='bigger' ><span className='iconfont icon-bigger'></span></Link>
                     </div>
                     <div className= 'privateContent'>
                         <AppScroll className='content'>
                             <div className='privateContentLeft'>
-                                <p> <b>17</b><span>Aug.2019</span></p>
-                                <p> <b>17</b><span>Aug.2019</span></p>
-                                <p> <b>17</b><span>Aug.2019</span></p>
+                                <p> <b>{time.getDate()}</b><span>{time.getFullYear()+'年'+(time.getMonth()+1)+'月'}</span></p>
+                                <p> <b>{time.getDate()-1}</b><span>{time.getFullYear()+'年'+(time.getMonth()+1)+'月'}</span></p>
+                                <p> <b>{time.getDate()-2}</b><span>{time.getFullYear()+'年'+(time.getMonth()+1)+'月'}</span></p>
                                 <p> <b>Ago</b><span>过往</span></p>
                             </div>
                         </AppScroll>
@@ -78,7 +78,7 @@ class Private extends Component {
                                     }
                                 </div>
                                 
-                                <h1>更多趣事，等你来发现</h1>
+                                <h3>更多趣事，等你来发现</h3>
                                 <span>简计生活，循序渐进</span>
                             </div>
                         </AppScroll>

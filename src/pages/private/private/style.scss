@@ -7,15 +7,21 @@
     .privateHeader{
         width: 100%;
         height: 2.36rem;
-        background: #F3F3F3;
+        background: url(/images/pb.png);
+        background-size: cover;
         padding: 0.5rem;
         box-sizing: border-box;
         .today{
             float: left;
+            font-weight: bold;
         }
         .bigger span{
            font-size: 0.6rem;
-           float: right;
+           margin-left: 0.5rem;
+           margin-top: -0.2rem; 
+           float: left;
+           color: black;
+           font-weight: bold;
         }
     }
     .privateContent{
@@ -31,7 +37,7 @@
         .privateContentLeft{
             width: 100%;
             height: 200%;
-            background: lemonchiffon;
+            background: lightsalmon;
             p{
                margin: 0 0.3rem 3.3rem 0;
                text-align: right;
@@ -44,7 +50,7 @@
             width: 96%;
             min-height: 200%;
             padding: 2%;
-            background: lightsalmon;
+            background: lemonchiffon;
             .showSecret{
                 margin: 0 0 1rem 0;
                 p{
