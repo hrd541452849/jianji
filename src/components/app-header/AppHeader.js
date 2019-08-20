@@ -6,7 +6,6 @@ import './app-header.scss';
 
 class AppHeader extends Component {
     render() {
-        console.log(this.props)
         const {title = '头部', left, leftAction, right, rightAction, className} = this.props;
         return (
             <div className={`app-header border-bottom ${className}`} >

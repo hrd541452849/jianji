@@ -11,6 +11,10 @@ class Together extends Component {
         return (
             <div id = "together">
                 <AppHeader title = "一起写" className = "together-head" right = {<Link to = "/together/newtopic">+</Link>} />
+                <div className = "main">
+                    <img src = "/images/together.png" alt = "一起写" />
+                    <Link to = "/together/newtopic" className = "together-add" >+&nbsp;新建主题</Link>
+                </div>
             </div>
         );
     }
