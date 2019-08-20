@@ -11,7 +11,7 @@ html, body, #app, .app,.App{
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 49px;
+    bottom: 1.306667rem;
     background: #fefefe;
     z-index: 10;
 }
@@ -22,7 +22,7 @@ html, body, #app, .app,.App{
 .page .content{
     width: 100%;
     position: absolute;
-    top: 44px;
+    top: 1.173333rem;
     bottom: 0;
 }
 #root {

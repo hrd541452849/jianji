@@ -108,9 +108,8 @@ class Register extends Component {
         let result = await post(api.REGISTER, {
             userEmail: this.state.regEmail,
             userPassword: this.state.password,
-            userNickname: this.state.panName
-            
-
+            userNickname: this.state.panName,
+            authCode: this.state.code
         })
         console.log(result);
     }
