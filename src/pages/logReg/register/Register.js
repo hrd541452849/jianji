@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 
 import api from '../../../utils/api'
 import {get, post} from '../../../utils/request'
-import {requestSendCodeAction} from '../../../store/modules/user';
 import Back from '../common/Back';
 import Input from '../common/Input';
 

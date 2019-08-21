@@ -14,7 +14,7 @@ class NewTopic extends Component {
             <div id = "newTopic">
                 <AppHeader title = "新建主题" left = {<img src="/images/go_back.png" alt = "返回" />} leftAction = {this.backAction.bind(this)}  className = "new-topic-head"/>
                 <div className = "main" >
-                    <div className = "imgContent"><img src = "/images/new_topic.png" /></div>
+                    <div className = "imgContent"><img src = "/images/new_topic.png" alt = "主题" /></div>
                     <div className = "name"><input type = "text" placeholder = "书名：一起写（点击修改）" /></div>
                     <div className = "set">
                         <span>私密</span>

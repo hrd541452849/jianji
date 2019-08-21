@@ -1,6 +1,6 @@
 
 import api from '../../utils/api'
-import {post, get} from '../../utils/request'
+import {post} from '../../utils/request'
 
 // types
 const SET_LOGIN_STATUS = 'user/set_login_status';

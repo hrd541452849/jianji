@@ -20,8 +20,8 @@ class Invite extends Component {
                  <div className = "main">
                     {this.state.inviteData.map(item => (
 
-                        <div className = "border-bottom inviteItem">
-                            <div className = "imgContent"><img src = {item.picUrl} /></div>
+                        <div key = {item.title} className = "border-bottom inviteItem">
+                            <div className = "imgContent"><img src = {item.picUrl} alt = {item.title} /></div>
                             <p>{item.title}</p>
                             <span>&gt;</span>
                         </div>
