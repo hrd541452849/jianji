@@ -69,7 +69,7 @@ const AppPanel = () => {
           <Route path = '/together' component = {Together} />
           <Route path = '/book' component = {Book} />
           <Route path = '/mine' component = {Mine} />
-          <Route path = '/' render = {() => (<Redirect to = '/together' />)} />
+          <Route path = '/' render = {() => (<Redirect to = '/private' />)} />
         </Switch>
 
         {/* 底部导航栏 */}

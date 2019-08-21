@@ -9,7 +9,7 @@ const TOGGLE_ISPRIVATE = 'user/toggle_isPrivate';
 // state
 const initialState = {
     isPrivate: true,
-    isLogin: true,
+    isLogin: false,
     userInfo: {}
 };
 

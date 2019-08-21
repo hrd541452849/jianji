@@ -5,7 +5,7 @@ class Book extends Component {
     render() {
         return (
             <div>
-                <h1>做书</h1>
+                <h1>未完成</h1>
             </div>
         );
     }

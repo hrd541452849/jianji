@@ -91,27 +91,33 @@ class Register extends Component {
 
     // 注册
     registerAction = async () => {
-        if (!/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test(this.state.regEmail)) {
-            alert("请输入正确的邮箱")
-            return false;
-        }else if(!/[a-zA-z0-9]{6}/.test(this.state.code)) {
-            alert("验证码应由六位字母或数字组成")
-            return false;
-        }else if(!/[a-zA-z0-9]{6,20}/.test(this.state.password)) {
-            alert("密码应由6-20位字母或数字组成")
-            return false;
-        }else if(this.state.password !== this.state.pwdRepeat) {
-            alert("两次密码输入不一致")
-            return false;
+        try {
+            if (!/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test(this.state.regEmail)) {
+                alert("请输入正确的邮箱")
+                return false;
+            }else if(!/[a-zA-z0-9]{6}/.test(this.state.code)) {
+                alert("验证码应由六位字母或数字组成")
+                return false;
+            }else if(!/[a-zA-z0-9]{6,20}/.test(this.state.password)) {
+                alert("密码应由6-20位字母或数字组成")
+                return false;
+            }else if(this.state.password !== this.state.pwdRepeat) {
+                alert("两次密码输入不一致")
+                return false;
+            }
+            let result = await post(api.REGISTER, {
+                userEmail: this.state.regEmail,
+                userPassword: this.state.password,
+                userNickname: this.state.panName,
+                authCode: this.state.code
+            })
+            console.log(result)
         }
-        console.log('注册事件');
-        let result = await post(api.REGISTER, {
-            userEmail: this.state.regEmail,
-            userPassword: this.state.password,
-            userNickname: this.state.panName,
-            authCode: this.state.code
-        })
-        console.log(result);
+        catch {
+            console.log(this.props);
+            this.props.history.push({pathname: '/login'})
+
+        }
     }
 }
 
