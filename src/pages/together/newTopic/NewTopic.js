@@ -1,5 +1,6 @@
 // 新建主题页面
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import { toggleIsPrivate } from '../../../store/modules/user';
 import AppHeader from '../../../components/app-header/AppHeader';
@@ -17,9 +18,13 @@ class NewTopic extends Component {
                     <div className = "name"><input type = "text" placeholder = "书名：一起写（点击修改）" /></div>
                     <div className = "set">
                         <span>私密</span>
-                        <span onClick = {toggleAction.bind(this, !isPrivate)} className = {isPrivate || 'public'}><i></i></span>
+                        <span onClick = {toggleAction.bind(this, !isPrivate)} className = {isPrivate ? 'public' : '' }><i></i></span>
                         <span>公开</span>
                         <span>（仅邀请内成员可见）</span>
+                    </div>
+                    <div className = "btn">
+                        <Link to = '/together/addcontent'>添加内容</Link>
+                        <Link to = '/together/invite'>邀请好友</Link>
                     </div>
                 </div>
             </div>
@@ -31,12 +36,11 @@ class NewTopic extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    isPrivate: state.isPrivate
+    isPrivate: state.user.isPrivate
 });
 
 const mapDispatchToProps = (dispatch) => ({
     toggleAction(flag){
-        console.log(1111)
         let action = toggleIsPrivate(flag);
         dispatch(action);
     }

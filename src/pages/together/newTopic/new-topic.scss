@@ -52,6 +52,24 @@
                     border-radius: 50%;
                     background: #fff;
                 }
+                &.public {
+                    justify-content: flex-end;
+                    background: #777;
+                }
+            }
+        }
+        .btn {
+            padding: .586667rem .666667rem;
+            display: flex;
+            justify-content: space-between;
+            a {
+                display: block;
+                width: 3.733333rem;
+                line-height: .666667rem;
+                border-radius: .666667rem;
+                text-align: center;
+                background: #333;
+                color: #fff;
             }
         }
     }

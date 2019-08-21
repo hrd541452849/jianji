@@ -1,0 +1,34 @@
+#invite {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    .main {
+        position: absolute;
+        top: 1.173333rem;
+        bottom: 0;
+        width: 100%;
+        overflow: hidden;
+        .inviteItem {
+            position: relative;
+            display: flex;
+            overflow: hidden;
+            height: 1.573333rem;
+            align-items: center;
+            font-size: .373333rem;
+            .imgContent {
+                padding: 0 .426667rem 0 .266667rem;
+                img {
+                    width: .666667rem;
+                }
+            }
+            span {
+                position: absolute;
+                right: .266667rem;
+                top: 50%;
+                transform: translate(0, -50%);
+
+            }
+        }
+    }
+}
